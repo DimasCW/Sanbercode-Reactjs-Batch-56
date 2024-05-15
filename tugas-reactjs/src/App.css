@@ -1,0 +1,18 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 200px;
+
+}
+
+.container{
+  padding: 25px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow:  5px 5px 12px #666666,
+               -5px -5px 12px #ffffff;  width: 70%;
+  height: 150px;
+}
+
