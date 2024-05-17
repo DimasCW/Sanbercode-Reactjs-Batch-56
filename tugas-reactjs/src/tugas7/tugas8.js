@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Button } from "flowbite-react";
 
 const Tugas8 = () => {
 
@@ -19,7 +20,7 @@ const Tugas8 = () => {
             <div className="App">
                 <div className='container'>
                     <p>{angka}</p>
-                    <button onClick={handleAngka}>Tambah</button>
+                    <Button className="btnnn" outline gradientDuoTone="tealToLime">Tambah</Button>
                     <p>{pesan}</p>
                 </div>
             </div>

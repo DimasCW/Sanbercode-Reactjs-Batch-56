@@ -7,7 +7,7 @@ const Tugas6 = () => {
                 <div className='container'>
                     <h1>Hi, Saya Dimas</h1>
                     <hr></hr>
-                    <p>Saya dari Batch 56 sudah berhasil menginstall React</p>
+                    <h1>Saya dari Batch 56 sudah berhasil menginstall React</h1>
                 </div>
             </div>
         </>
