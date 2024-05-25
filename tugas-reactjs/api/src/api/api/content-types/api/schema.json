@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apis",
+  "info": {
+    "singularName": "api",
+    "pluralName": "apis",
+    "displayName": "api",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "no": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "mataKuliah": {
+      "type": "string"
+    },
+    "score": {
+      "type": "string"
+    }
+  }
+}
