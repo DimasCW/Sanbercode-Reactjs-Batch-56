@@ -362,53 +362,28 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiApiApi extends Schema.CollectionType {
-  collectionName: 'apis';
-  info: {
-    singularName: 'api';
-    pluralName: 'apis';
-    displayName: 'api';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    no: Attribute.UID;
-    name: Attribute.String;
-    mataKuliah: Attribute.String;
-    score: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::api.api', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::api.api', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiMobileAppMobileApp extends Schema.CollectionType {
   collectionName: 'mobile_apps';
   info: {
     singularName: 'mobile-app';
     pluralName: 'mobile-apps';
     displayName: 'mobile-app';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     name: Attribute.String;
+    description: Attribute.Text;
     category: Attribute.String;
     release_year: Attribute.BigInteger;
     size: Attribute.BigInteger;
     price: Attribute.Float;
     rating: Attribute.Integer;
     image_url: Attribute.String;
-    is_android_app: Attribute.Boolean;
-    is_ios_app: Attribute.Boolean;
-    description: Attribute.Text;
+    is_android_app: Attribute.Integer;
+    is_ios_app: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -863,7 +838,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::api.api': ApiApiApi;
       'api::mobile-app.mobile-app': ApiMobileAppMobileApp;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;

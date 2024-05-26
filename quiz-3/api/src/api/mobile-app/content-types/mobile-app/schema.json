@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_apps",
+  "info": {
+    "singularName": "mobile-app",
+    "pluralName": "mobile-apps",
+    "displayName": "mobile-app",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "category": {
+      "type": "string"
+    },
+    "release_year": {
+      "type": "biginteger"
+    },
+    "size": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "float"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "is_android_app": {
+      "type": "integer"
+    },
+    "is_ios_app": {
+      "type": "integer"
+    }
+  }
+}
