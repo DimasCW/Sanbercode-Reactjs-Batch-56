@@ -49,7 +49,7 @@ const Tugas10 = () => {
     console.log(input);
 
     let { no, name, mataKuliah, score } = input;
-    axios.post('https://backendexample.sanbercloud.com/api/contestants', { no, name, mataKuliah, score })
+    axios.post('http://localhost:1337/api/apis', { no, name, mataKuliah, score })
       .then((res) => {
         console.log(res);
         setFetchStatus(true);
@@ -74,6 +74,17 @@ const Tugas10 = () => {
     return "E";
   };
 
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:1337/api/apis/${id}`)
+      .then((res) => {
+        console.log(res);
+        setFetchStatus(true);
+      })
+      .catch((error) => {
+        console.error('Error deleting data:', error);
+      });
+  };
+
   return (
     <div className="App">
       <div className="container-table">
@@ -86,21 +97,31 @@ const Tugas10 = () => {
                 <th scope="col" className="px-6 py-3">MATA KULIAH</th>
                 <th scope="col" className="px-6 py-3">NILAI</th>
                 <th scope="col" className="px-6 py-3">INDEX NILAI</th>
+                <th scope="col" className="px-6 py-3">ACTION</th>
               </tr>
             </thead>
             <tbody>
               {data.length === 0 ? (
                 <tr>
-                  <td colSpan="5" className="px-6 py-4 text-center">No data available</td>
+                  <td colSpan="6" className="px-6 py-4 text-center">No data available</td>
                 </tr>
               ) : (
-                data.map((res, index) => (
+                data.map((res) => (
                   <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={res.id}>
                     <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{res.attributes.no}</th>
                     <td className="px-6 py-4">{res.attributes.name}</td>
                     <td className="px-6 py-4">{res.attributes.mataKuliah}</td>
                     <td className="px-6 py-4">{res.attributes.score}</td>
                     <td className="px-6 py-4">{handleIndexScore(res.attributes.score)}</td>
+                    <td className="px-6 py-4">
+                      <button
+                        onClick={() => handleDelete(res.id)}
+                        type="button"
+                        className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                      >
+                        Delete
+                      </button>
+                    </td>
                   </tr>
                 ))
               )}
@@ -108,8 +129,6 @@ const Tugas10 = () => {
           </table>
         </div>
       </div>
-
-      
     </div>
   );
 };
