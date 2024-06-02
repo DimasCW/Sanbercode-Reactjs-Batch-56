@@ -1,0 +1,50 @@
+.titleVacancy{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.card-vacancy{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 20px;
+    width: 80%;
+    height: 200px;
+    border-radius: 16px;
+    background: #01204E;
+    box-shadow:  5px 5px 10px #ffffff,
+                -5px -5px 10px #ffffff;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10%;
+}
+
+.card-vacancy img{
+    width: 150px;
+    overflow: auto;
+}
+
+.text-white{
+    color: white;
+}
+
+.text-bold{
+    font-weight: 700;
+}
+.text-small{
+    font-size: small;
+}
+
+.mb{
+    margin-bottom: 10px;
+}
+
+.fontStyle{
+    font-family:sans-serif;
+}
