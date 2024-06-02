@@ -25,7 +25,7 @@ const Footer = () => {
                         </a>
                         </li>
                         <li>
-                        <a href="wa.me/6281371758592" className="hover:underline">
+                        <a href="https://api.whatsapp.com/send/?phone=6281371758592&text&type=phone_number&app_absent=0" className="hover:underline">
                             Contact
                         </a>
                         </li>
