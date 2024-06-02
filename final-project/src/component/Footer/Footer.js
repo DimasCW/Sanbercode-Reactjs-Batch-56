@@ -35,7 +35,7 @@ const Footer = () => {
                     <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
                     © 2024{" "}
                     <a href="https://flowbite.com/" className="hover:underline">
-                        Pekerja Dinasti
+                        Dimas Chandra Winata
                     </a>
                     . All Rights Reserved.
                     </span>
